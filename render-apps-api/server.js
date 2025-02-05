@@ -13,6 +13,7 @@ app.get('/', async (req, res) => {
         const response = await axios.get('https://api.render.com/v1/services', {
             headers: {
                 'Authorization': `Bearer ${RENDER_API_TOKEN}`,
+                'Accept': 'application/json'
             }
         });
         res.json(response.data);
